@@ -13,15 +13,16 @@ app.register(cors, {
 });
 
 app.register(jwt, {
-  secret: 'spacetime',
+  secret: "spacetime",
 });
 
-app.register(authRoutes)
+app.register(authRoutes);
 app.register(memoriesroutes);
 
 app
   .listen({
     port: 3333,
+    host: "0.0.0.0",
   })
   .then(() => {
     console.log("HTTP server running on http://localhost:3333");
